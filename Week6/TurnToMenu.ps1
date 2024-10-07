@@ -20,7 +20,7 @@ $Prompt += "5 - Exit`n"
 
 $menu_open = $true
 
-while($operation){
+while($menu_open){
 
     
     Write-Host $Prompt | Out-String
@@ -30,7 +30,7 @@ while($operation){
     if($choice -eq 5){
         Write-Host "Thank you for using the menu, Goodbye" | Out-String
         exit
-        $operation = $false 
+        $menu_open = $false 
     }
 
     # Display the last 10 Apache Logs
