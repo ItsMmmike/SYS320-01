@@ -65,8 +65,6 @@ function frequentVisitors(){
 	done
 }
 
-
-
 # function: suspiciousVisitors
 # Filter and sort logs that contain indicators of compromise, uses a provided ioc pattern file to determine if file should be counted
 
