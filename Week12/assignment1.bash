@@ -31,12 +31,7 @@ echo ""
 }
 
 # TODO - 1
-# Make a function that displays all the courses in given location
-# function dislaplays course code, course name, course days, time, instructor
-# Add function to the menu
-# Example input: JOYC 310
-# Example output: See the screenshots in canvas
-
+# Funciton that displays all the courses in given location
 function displayLocationCourses(){
 
 # User input for classroom
@@ -49,19 +44,14 @@ echo ""
 }
 
 # TODO - 2
-# Make a function that displays all the courses that has availability
-# (seat number will be more than 0) for the given course code
-# Add function to the menu
-# Example input: SEC
-# Example output: See the screenshots in canvas
-
+# Function that displays all the courses that has availability
 function displayCourseAvailability(){
 
 # User input for course code
 echo -n "Please Input a Subject Name (ex. SEC): "
 read subject
 
-# Filters and displays results if they match the user input
+# Filters and displays results if seats is greater than 0
 cat "$courseFile" | grep "$subject" | awk -F ';' '{if($4 > 0) print}' | sed 's/;/ | /g'
 echo ""
 }
